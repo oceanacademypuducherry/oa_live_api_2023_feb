@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .box {
+        padding: 10px;
+      }
+      .left {
+        border-radius: 8px;
+        text-align: center;
+        width: 300px;
+        height: auto;
+        background: #dedede81;
+
+        padding: 8px;
+      }
+      .oa-logo {
+        margin-bottom: 15px;
+      }
+      .course {
+        margin-bottom: 20px;
+        color: rgb(43, 43, 43);
+      }
+
+      .nameLogo {
+        position: relative;
+        height: 60px;
+        width: 60px;
+        min-height: 60px;
+        min-width: 60px;
+        background: rgb(208, 208, 208);
+        border-radius: 50%;
+        font-size: 30px;
+        color: rgb(80, 80, 80);
+        font-weight: bold;
+        padding-top: 10px;
+        margin-left: 110px;
+      }
+
+      .name {
+        font-size: 25px;
+        margin: 5px;
+        color: rgb(27, 27, 27);
+      }
+      .mo-em {
+        margin: 0;
+        font-size: 18px;
+      }
+      .mo-em > p {
+        margin: 2px;
+        color: gray;
+      }
+      .action {
+        margin-top: 25px;
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+      .call {
+        transform: scale(0.7);
+        height: 40px;
+        width: 40px;
+
+        display: inline-block;
+      }
+      .empty {
+        display: inline-block;
+        width: 50px;
+      }
+      .cour {
+        font-size: 20px;
+        color: rgb(27, 27, 27);
+      }
+      .des {
+        margin-top: 10px;
+        color: gray;
+      }
+      hr {
+        outline: none;
+        border: none;
+        border: 1px solid rgb(169, 169, 169);
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left">
+        <img class="oa-logo" src="cid:logo" alt="logo" width="200" />
+        <h3 class="course">Python Enquiry</h3>
+        <div class="nameLogo">
+          <span>{{chr}}</span>
+        </div>
+
+        <div class="name">{{name}}</div>
+
+        <div class="mo-em">
+          <p>{{mobileNumber}}</p>
+
+          <p>{{email}}</p>
+        </div>
+        <div class="action">
+          <a href="tel:{{mobileNumber}}">
+            <div class="call">
+              <img src="cid:call" alt="call" />
+            </div>
+          </a>
+          <div class="empty"></div>
+          <a href="mailto:{{email}}">
+            <div class="call">
+              <img src="cid:mail" alt="mail" />
+            </div>
+          </a>
+        </div>
+        <hr />
+
+        <p class="des">{{description}}</p>
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>
