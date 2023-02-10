@@ -6,7 +6,7 @@ const verifyToken = require("../../verifyToken");
 
 // get all certificate
 
-router.get("/get/all", verifyToken, async (req, res) => {
+router.post("/get/all", verifyToken, async (req, res) => {
   try {
     const cert = await Certificate.find();
 
