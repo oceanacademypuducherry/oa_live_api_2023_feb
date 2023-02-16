@@ -79,7 +79,7 @@ router.post("/result", async (req, res) => {
     mailer({
       to: result.email,
       subject: `OA MCQ Result for ${result.topic}`,
-      content: `Hi ${result.username}\n\t Check your answers here http://localhost:3000/mcq/result/${result._id}`,
+      content: `Hi ${result.username}\n\t Check your answers here https://oceanacademy.co.in/mcq/result/${result._id}`,
       responseMailer: (error, info) => {
         if (error) {
           res.status(500).json({ error: error.message });

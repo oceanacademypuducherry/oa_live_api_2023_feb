@@ -55,7 +55,7 @@ router.post("/add", verifyToken, async (req, res) => {
 
 // update certificate
 router.post("/update/:studentId", verifyToken, async (req, res) => {
-  const studentId = req.body.studentId;
+  const studentId = req.params.studentId;
   const certificateUrl = req.body.certificateUrl;
   try {
     if (studentId == null) throw Error("student ID required");
@@ -74,7 +74,7 @@ router.post("/update/:studentId", verifyToken, async (req, res) => {
 });
 // delete certificate
 router.post("/delete/:studentId", verifyToken, async (req, res) => {
-  const studentId = req.body.studentId;
+  const studentId = req.params.studentId;
 
   try {
     if (studentId == null) throw Error("student ID required");
