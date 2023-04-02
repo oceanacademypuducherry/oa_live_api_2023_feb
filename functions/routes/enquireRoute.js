@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "oceanacademypuducherry@gmail.com",
-    pass: "kndyaofbgwibspus", //smtp Password
+    pass: "qwqokbolvyhunufr", //smtp Password
   },
 });
 
@@ -80,9 +80,17 @@ router.get("/all", async (req, res) => {
     let allEnquiry = await AlertEnquiry.find();
     res.json(allEnquiry);
   } catch (error) {
-    console.log(error.message);
     res.json({ message: error.message });
   }
 });
 
+router.post("/delete/:docId", async (req, res) => {
+  const docId = req.params.docId;
+  try {
+    await AlertEnquiry.deleteOne({ _id: docId });
+    res.json({ message: "deleted successfuly..." });
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+});
 module.exports = router;
