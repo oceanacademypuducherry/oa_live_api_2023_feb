@@ -3,14 +3,14 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "oceanacademypuducherry@gmail.com",
-    pass: "qwqokbolvyhunufr", //smtp Password
+    user: "oceanacademy.project@gmail.com",
+    pass: "hljrhggaiplhhzau", //smtp Password
   },
 });
 
 function mailer({
   to = "",
-  from = "oceanacademypuducherry@gmail.com",
+  from = "oceanacademy.project@gmail.com",
   subject = "Welcome to Ocean Academy",
   content = "Hi There!\n\tWelcome to Ocean Academy",
   responseMailer = () => {},

@@ -8,8 +8,8 @@ const fs = require("fs");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "oceanacademypuducherry@gmail.com",
-    pass: "qwqokbolvyhunufr", //smtp Password
+    user: "oceanacademy.project@gmail.com",
+    pass: "hljrhggaiplhhzau", //smtp Password
   },
 });
 
